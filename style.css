@@ -1,0 +1,151 @@
+body{
+    transition: 0.5s ease;
+}
+#home h1{
+    font-family: 'Unbounded', cursive;
+    text-shadow: 0 0 10px rgba(62, 58, 54, 0.68), 0 0 10px rgba(45, 44, 43, 0.68);
+}
+#komposisi h1, #elements h1, #tentang h1{
+    font-family: 'Rubik', sans-serif;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* navbar start */
+nav{
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s ease;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.ns{
+    width: 90%;
+    margin: 8px;
+    border-radius: 20px;
+}
+nav .navbar-brand h3{
+    margin-bottom: 6px;
+}
+nav #moon{
+    padding: 6px 15px;
+}
+/* navbar end */
+
+/* home start */
+#home{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.475)), url('assets/GenshinImpact.jpg');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    text-align:center;
+    width:100%;
+    box-shadow: inset 0 -100px 150px black;
+    animation: forwards 6s shadow;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes shadow{
+    0%{
+        box-shadow: inset 0 -900px 150px black;
+    }
+    100%{
+        box-shadow: inset 0 0 0px black;
+    }
+}
+#home p{
+    text-shadow: 0 0 10px rgba(62, 58, 54, 0.68), 0 0 10px rgba(45, 44, 43, 0.68);
+}
+#home a{
+    transition: 0.5s;
+}
+/* home end */
+
+ /* komposisi start */
+#komposisi{
+    padding-top: 100px;
+    transition: 0.5s ease;
+}
+/* komposisi end */
+
+/* elements start */
+#elements{
+    padding-top: 100px;
+    transition: 0.5s ease;
+}
+#elements .carousel-inner h5, #elements .carousel-inner p{
+    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+/* elements end */
+
+/* tentang start */
+#tentang {
+    padding-bottom: 200px;
+    padding-top: 100px;
+    transition: 0.5s ease;
+}
+#tentang .figure{
+    width: 255px;
+    height: 230px;
+    position: relative;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+}
+#tentang .figure img{
+    transform: translate3d(0, 0, 50px);
+    width: 127.5px;
+    top: -60px;
+    position: absolute;
+}
+#tentang .figure h5, .figure .figure-caption{
+    transform: translate3d(0, 0, 20px);
+}
+#tentang .figure h3{
+    transform: translate3d(0, 0, 30px);
+}
+/* tentang end */
+
+/* darkmode start */
+.dark{
+    background-color: #111;
+}
+.dark #komposisi, .dark #elements, .dark {
+    color: white;
+}
+/* darkmode end */
+
+/* responsive */
+@media (min-width: 991px) {
+    h1, li a{
+        text-transform: uppercase;
+    }
+}
+@media (max-width: 991px) {
+    #elements{
+        padding-top: 120px;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-caption{
+        padding-bottom: 0;
+    }
+    .carousel-caption h5{
+        font-size: 16px;
+    }
+    .carousel-caption p{
+        font-size: 12px;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        width: 20%;
+    }
+}
